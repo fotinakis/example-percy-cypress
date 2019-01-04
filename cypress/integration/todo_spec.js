@@ -21,6 +21,7 @@ describe('TodoMVC', function() {
     // Add a new todo item.
     cy.get('.new-todo').should('exist')
     cy.get('.new-todo').type('New fancy todo {enter}')
+    cy.percySnapshot();
 
     // We should have 1 todo item showing in the todo list and the footer.
     cy.get('.todo-list').children('li').should('have.length', 1)
